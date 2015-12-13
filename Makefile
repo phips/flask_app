@@ -10,7 +10,7 @@ test: build
 
 dist: test
 	@test -d dist || mkdir dist
-	@tar cvzf dist/app.tgz app run_* Makefile support
+	@tar cvzf dist/app.tgz app run_* Makefile *ini support
 
 clean:
 	@rm -rf dist
