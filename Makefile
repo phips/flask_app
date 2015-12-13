@@ -1,14 +1,15 @@
 .PHONY: test run dist clean
 
-test:
-	@PYTHONPATH=. nosetests --with-xunit -vdw test
-
 build:
-	pip install -r requirements.txt
+	@virtualenv --system-site-packages support
+	@support/bin/pip install -r requirements.txt
+
+test: build
+	@PYTHONPATH=. support/bin/nosetests --with-xunit -vdw test
 
 dist: test
 	@test -d dist || mkdir dist
-	@tar cvzf dist/app.tgz app run_* Makefile
+	@tar cvzf dist/app.tgz app run_* Makefile support
 
 clean:
 	@rm -rf dist
