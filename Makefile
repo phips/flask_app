@@ -3,6 +3,7 @@
 build:
 	@virtualenv --system-site-packages support
 	@support/bin/pip install -r requirements.txt
+	@virtualenv --relocatable support
 
 test: build
 	@PYTHONPATH=. support/bin/nosetests --with-xunit -vdw test
