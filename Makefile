@@ -5,7 +5,7 @@ build:
 	@support/bin/pip install -r requirements.txt
 	@virtualenv --relocatable support
 
-test: build
+test:
 	@PYTHONPATH=. support/bin/nosetests --with-xunit -vdw test
 
 dist: test
