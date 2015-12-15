@@ -9,4 +9,4 @@ def test_homepage():
     eq_(ret.status_code, 200)
     doc = pq(ret.data)
     # import pdb; pdb.set_trace()
-    eq_(doc.find('h1').text(), "Hello, Shell!")
+    eq_(doc.find('h1').text(), "Amazing App!")
