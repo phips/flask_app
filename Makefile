@@ -13,7 +13,10 @@ dist: test
 	@tar cvzf dist/app.tgz app run_* Makefile *ini support
 
 clean:
-	@rm -rf dist
+	rm -rf dist
+
+fullclean:
+	rm -rf dist support
 
 run:
 	@./run_dev.py
