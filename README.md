@@ -1,5 +1,7 @@
 # Amazing Flask App
 
+[![Build Status](https://travis-ci.org/phips/flask_app.svg?branch=master)](https://travis-ci.org/phips/flask_app)
+
 There is nothing amazing about this app :)
 
 Long story short - it's used in my [Ansible demos](http://github.com/phips/ansible-demos), that's all.
