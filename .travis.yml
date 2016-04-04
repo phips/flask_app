@@ -8,5 +8,5 @@ script: "PYTHONPATH=. nosetests -vdw test"
 
 branches:
   only:
-    - tiad
+    - master
 
